@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+    <schema id="org.gnome.shell.extensions.CustomCorner" path="/org/gnome/shell/extensions/CustomCorner/">
+        <key type="s" name="top-left-action">
+            <default>"GNOME Default"</default>
+            <summary>Top-left Hot Corner action</summary>
+            <description>The action to perform when the mouse pointer moves into the top-left corner of the screen</description>
+        </key>
+        <key type="s" name="top-right-action">
+            <default>"[No Action]"</default>
+            <summary>Top-right Hot Corner action</summary>
+            <description>The action to perform when the mouse pointer moves into the top-right corner of the screen</description>
+        </key>
+        <key type="s" name="bottom-left-action">
+            <default>"[No Action]"</default>
+            <summary>Bottom-left Hot Corner action</summary>
+            <description>The action to perform when the mouse pointer moves into the bottom-left corner of the screen</description>
+        </key>
+        <key type="s" name="bottom-right-action">
+            <default>"[No Action]"</default>
+            <summary>Bottom-right Hot Corner action</summary>
+            <description>The action to perform when the mouse pointer moves into the bottom-right corner of the screen</description>
+        </key>
+        <key type="s" name="top-left-command">
+            <default>""</default>
+            <summary>Top-left Hot Corner command</summary>
+            <description>The command to run for the top-left Hot Corner</description>
+        </key>
+        <key type="s" name="top-right-command">
+            <default>""</default>
+            <summary>Top-right Hot Corner command</summary>
+            <description>The command to run for the top-right Hot Corner</description>
+        </key>
+        <key type="s" name="bottom-left-command">
+            <default>""</default>
+            <summary>Bottom-left Hot Corner command</summary>
+            <description>The command to run for the bottom-left Hot Corner</description>
+        </key>
+        <key type="s" name="bottom-right-command">
+            <default>""</default>
+            <summary>Bottom-right Hot Corner command</summary>
+            <description>The command to run for the bottom-right Hot Corner</description>
+        </key>
+        <key type="s" name="top-left-app">
+            <default>""</default>
+            <summary>Top-left Hot Corner application</summary>
+            <description>The application to run for the top-left Hot Corner</description>
+        </key>
+        <key type="s" name="top-right-app">
+            <default>""</default>
+            <summary>Top-right Hot Corner application</summary>
+            <description>The application to run for the top-right Hot Corner</description>
+        </key>
+        <key type="s" name="bottom-left-app">
+            <default>""</default>
+            <summary>Bottom-left Hot Corner application</summary>
+            <description>The application to run for the bottom-left Hot Corner</description>
+        </key>
+        <key type="s" name="bottom-right-app">
+            <default>""</default>
+            <summary>Bottom-right Hot Corner application</summary>
+            <description>The application to run for the bottom-right Hot Corner</description>
+        </key>
+    </schema>
+</schemalist>

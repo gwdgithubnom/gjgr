@@ -1,0 +1,45 @@
+.kimpanel-label {
+  font-family:sans;
+  font-weight:normal;
+  padding: 5px;
+}
+
+.kimpanel-separator {
+  -gradient-height: 1px;
+  -gradient-start: rgba(255, 255, 255, 0);
+  -gradient-end: rgba(255, 255, 255, 0.1);
+  -marigin-horizontal: 1.5em;
+  padding: 0 0 0.5em 0;
+  height: 1px;
+}
+
+.kimpanel-label-item {
+  padding: 3px;
+}
+
+.kimpanel-candidate-item {
+  cursor: pointer;
+}
+
+.kimpanel-candidate-item:hover {
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.33);
+}
+
+.kimpanel-candidate-item:active {
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.33);
+}
+
+.kimpanel-candidate-item:active:hover {
+  border-radius: 4px;
+  background-color: rgba(255,255,255,0.15);
+}
+
+.minwidth-zero {
+  min-width: 0;
+}
+
+.icon-disable {
+  color:rgba(150,150,150,0.5);
+}

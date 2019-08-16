@@ -1,0 +1,121 @@
+{
+  "nodes": [
+    {
+      "name": "Data"
+    },
+    {
+      "name": "Natural Science Data"
+    },
+    {
+      "name": "Social Science Data"
+    },
+    {
+      "name": "Health Data"
+    },
+    {
+      "name": "Climate Data"
+    },
+    {
+      "name": "Spatial Data"
+    },
+    {
+      "name": "Chemistry Data"
+    },
+    {
+      "name": "Biological Data"
+    },
+    {
+      "name": "Other Natural Science Data"
+    },
+    {
+      "name": "Economic Data"
+    },
+    {
+      "name": "Geography Data"
+    },
+    {
+      "name": "Linguistics Data"
+    },
+    {
+      "name": "Population Data"
+    },
+    {
+      "name": "Anthropology Data"
+    },
+    {
+      "name": "Other Social Science Data"
+    }
+  ],
+  "links": [
+    {
+      "source": "Data",
+      "target": "Natural Science Data",
+      "value": 1
+    },
+    {
+      "source": "Data",
+      "target": "Social Science Data",
+      "value": 1
+    },
+    {
+      "source": "Natural Science Data",
+      "target": "Health Data",
+      "value": 0.03
+    },
+    {
+      "source": "Natural Science Data",
+      "target": "Spatial Data",
+      "value": 0.03
+    },
+    {
+      "source": "Natural Science Data",
+      "target": "Chemistry Data",
+      "value": 0.03
+    },
+    {
+      "source": "Natural Science Data",
+      "target": "Climate Data",
+      "value": 0.03
+    },
+    {
+      "source": "Natural Science Data",
+      "target": "Biological Data",
+      "value": 0.03
+    },
+    {
+      "source": "Natural Science Data",
+      "target": "Other Natural Science Data",
+      "value": 0.9
+    },
+    {
+      "source": "Social Science Data",
+      "target": "Geography Data",
+      "value": 0.03
+    },
+    {
+      "source": "Social Science Data",
+      "target": "Linguistics Data",
+      "value": 0.03
+    },
+    {
+      "source": "Social Science Data",
+      "target": "Population Data",
+      "value": 0.03
+    },
+    {
+      "source": "Social Science Data",
+      "target": "Anthropology Data",
+      "value": 0.03
+    },
+    {
+      "source": "Social Science Data",
+      "target": "Economic Data",
+      "value": 0.03
+    },
+    {
+      "source": "Social Science Data",
+      "target": "Other Social Science Data",
+      "value": 0.9
+    }
+  ]
+}

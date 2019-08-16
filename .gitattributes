@@ -1,0 +1,8 @@
+pom.xml merge=ours
+**/pom.xml merge=ours
+*/pom.xml merge=ours
+.gitattributes merge=ours
+# git commit -m "add git config merge.ours.driver true
+# export-ignore
+# merge=ours
+# git config --global merge.ours.driver true

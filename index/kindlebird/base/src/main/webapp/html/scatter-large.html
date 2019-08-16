@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/echarts.min.js"></script>
+</head>
+<body>
+<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+<div id="main" style="width: 600px;height:400px;"></div>
+<script type="text/javascript">
+    var data = [];
+    var jsonData = $.getJSON("../data/asset/cluster1.json", function (dat) {
+        // console.log(typeof(dat));
+        $.each(dat, function (index, d) {
+            node = {};
+            node.name = d.name;
+            node.type = d.type;
+            node.large = d.large;
+            node.symbolSize = d.symbolSize;
+            var nodedata = [];
+            $.each(d.data, function (index, da) {
+                //console.log(d.data[index].x)
+                nodedata.push([d.data[index].x, d.data[index].y]);
+
+            });
+            node.data = nodedata;
+            data.push(node);
+        });
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        option = {
+            title: {
+                text: ''
+            },
+            tooltip: {
+                trigger: 'axis',
+                showDelay: 0,
+                axisPointer: {
+                    show: true,
+                    type: 'cross',
+                    lineStyle: {
+                        type: 'dashed',
+                        width: 1
+                    }
+                },
+                zlevel: 1
+            },
+            legend: {
+                data: ['cluster1', 'cluster2', 'cluster0']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: {show: true},
+                    dataZoom: {show: true},
+                    dataView: {show: true, readOnly: false},
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            xAxis: [
+                {
+                    type: 'value',
+                    scale: true
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    scale: true
+                }
+            ],
+            series: data//这里进行替换了
+        };
+        //sample 后面就是原来的data位置的数据
+        console.log(option.series)
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+    });
+    // jsonData=eval("("+jsonData+")");
+    console.log(data);
+    // var jsonData=eval("")
+    /*
+     $.each(data.nodes,function(index,info){
+     console.log("#"+index+":"+info.type);
+     });
+     */
+
+</script>
+
+</body>
+</html>

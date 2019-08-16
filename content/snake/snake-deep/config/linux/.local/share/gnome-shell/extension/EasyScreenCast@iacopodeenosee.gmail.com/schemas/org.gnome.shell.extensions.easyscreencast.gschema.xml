@@ -1,0 +1,170 @@
+<schemalist>
+    <schema id="org.gnome.shell.extensions.EasyScreenCast" path="/org/gnome/shell/extensions/EasyScreenCast/">
+        <key name="show-notify-alert" type="b">
+            <default>true</default>
+            <summary>Enable show notify and alert message</summary>
+            <description>Enable show notify and alert message</description>
+        </key>
+        <key name="show-area-rec" type="b">
+            <default>false</default>
+            <summary>Enable show area screencast during recording</summary>
+            <description>Enable show area screencast during recording</description>
+        </key>
+        <key name="input-audio-source" type="i">
+            <default>0</default>
+            <summary>select input audio source</summary>
+            <description>select input audio source</description>
+        </key>
+        <key name="active-custom-gsp" type="b">
+            <default>false</default>
+            <summary>Active custom GStreamer Pipeline</summary>
+            <description>Active custom GStreamer Pipeline</description>
+        </key>
+        <key name="delay-time" type="i">
+            <default>0</default>
+            <summary>Time in seconds fot delay recording</summary>
+            <description>Time in seconds fot delay recording</description>
+        </key>
+        <key name="verbose-debug" type="b">
+            <default>false</default>
+            <summary>Enable verbose debug</summary>
+            <description>Enable verbose debug</description>
+        </key>
+        <key name="x-pos" type="i">
+            <default>0</default>
+            <summary>X position of screencasting</summary>
+            <description>X position of screencasting</description>
+        </key>
+        <key name="y-pos" type="i">
+            <default>0</default>
+            <summary>Y position of screencasting</summary>
+            <description>Y position of screencasting</description>
+        </key>
+        <key name="width-rec" type="i">
+            <default>600</default>
+            <summary>width of screencasting</summary>
+            <description>width of screencasting</description>
+        </key>
+        <key name="height-rec" type="i">
+            <default>400</default>
+            <summary>height of screencasting</summary>
+            <description>height of screencasting</description>
+        </key>
+        <key name="status-indicators" type="i">
+            <default>1</default>
+            <summary>active status indicators</summary>
+            <description>active status indicators</description>
+        </key>
+        <key name="draw-cursor" type="b">
+            <default>true</default>
+            <summary>draw the cursor into screencast</summary>
+            <description>draw the cursor into screencast</description>
+        </key>
+        <key name="fps" type="i">
+            <default>30</default>
+            <summary>fps of screencasting</summary>
+            <description>fps of screencasting</description>
+        </key>
+        <key name="pipeline" type="s">
+            <default>'vp9enc min_quantizer=13 max_quantizer=13 cpu-used=5 deadline=1000000 threads=%T ! queue ! webmmux'</default>
+            <summary>gstreamer pipeline of screencasting</summary>
+            <description>gstreamer pipeline of screencasting</description>
+        </key>
+        <key name="area-screen" type="i">
+            <default>0</default>
+            <summary>select area of screencast</summary>
+            <description>select area of screencast</description>
+        </key>
+        <key name="file-name" type="s">
+            <default>'Screencast_%d_%t'</default>
+            <summary>file name template of screencast</summary>
+            <description>file name template of screencast</description>
+        </key>
+        <key name="file-folder" type="s">
+            <default>''</default>
+            <summary>file folder of screencast</summary>
+            <description>file folder of screencast</description>
+        </key>
+        <key name="execute-post-cmd" type="b">
+            <default>false</default>
+            <summary>enable execute post command</summary>
+            <description>enable execute post command</description>
+        </key>
+        <key name="post-cmd" type="s">
+            <default>'xdg-open _fpath &amp;'</default>
+            <summary>command to execute</summary>
+            <description>command to execute</description>
+        </key>
+        <key name="shortcut-key" type="as">
+            <default>
+                <![CDATA[['<Super>E']]]>
+            </default>
+        </key>
+        <key name="active-shortcut" type="b">
+            <default>false</default>
+            <summary>Enable keyboard shortcut</summary>
+            <description>Enable keyboard shortcut</description>
+        </key>
+        <key name="file-container" type="i">
+            <default>0</default>
+            <summary>file screencast container</summary>
+            <description>file screencast container</description>
+        </key>
+        <key name="file-resolution" type="i">
+            <default>0</default>
+            <summary>file screencast resolution</summary>
+            <description>file screencast resolution</description>
+        </key>
+        <key name="quality-index" type="i">
+            <default>1</default>
+            <summary>store the quality index option</summary>
+            <description>store the quality index option</description>
+        </key>
+        <key name="device-webcam" type="i">
+            <default>0</default>
+            <summary>select webcam device</summary>
+            <description>select webcam device</description>
+        </key>
+        <key name="quality-webcam" type="s">
+            <default>""</default>
+            <summary>select webcam quality</summary>
+            <description>select webcam quality</description>
+        </key>
+        <key name="width-webcam" type="i">
+            <default>20</default>
+            <summary>width webcam</summary>
+            <description>width webcam</description>
+        </key>
+        <key name="height-webcam" type="i">
+            <default>10</default>
+            <summary>height webcam</summary>
+            <description>height webcam</description>
+        </key>
+        <key name="type-unit-webcam" type="i">
+            <default>0</default>
+            <summary>type of unit of measure webcam</summary>
+            <description>type of unit of measure</description>
+        </key>
+        <key name="margin-x-webcam" type="i">
+            <default>0</default>
+            <summary>margin x from border webcam</summary>
+            <description>margin x webcam</description>
+        </key>
+        <key name="margin-y-webcam" type="i">
+            <default>0</default>
+            <summary>margin y from border webcam</summary>
+            <description>margin y from border webcam</description>
+        </key>
+        <key name="alpha-channel-webcam" type="d">
+            <default>0.75</default>
+            <range min="0.05" max="1.00"/>
+            <summary>alpha channel webcam</summary>
+            <description>aplha channel webcam</description>
+        </key>
+        <key name="corner-position-webcam" type="i">
+            <default>0</default>
+            <summary>the corner position of webcam</summary>
+            <description>the corner position of webcam</description>
+        </key>
+    </schema>
+</schemalist>

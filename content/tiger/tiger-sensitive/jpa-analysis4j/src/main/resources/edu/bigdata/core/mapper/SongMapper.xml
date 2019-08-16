@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 命名空间：mapper接口全名 -->
+<mapper namespace="edu.bigdata.core.mapper.SongMapper">
+
+    <!-- 主键查询 -->
+    <select id="getSongPredictCollection" resultType="edu.bigdata.core.entity.alibaba.SongPredict">
+
+    </select>
+    <resultMap id="edu.bigdata.core.entity.alibaba.FactorCollection" type="FactorCollection">
+        <id property="id" column="column1"/>
+    </resultMap>
+</mapper>

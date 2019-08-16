@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration  scan="true" scanPeriod="60 seconds" debug="false">
+    <!--TRACE, DEBUG, INFO, WARN, ERROR, ALL 和 OFF-->
+    <property name="app" value="log4j"></property>
+    <property name="log.path" value="logs" />
+
+    <contextName>${app}</contextName>
+
+<!--    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />-->
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <!-- %d{HH:mm:ss.SSS} -->
+            <pattern>%d [%contextName] [%thread] %-5level %logger{50} - %msg %n</pattern>
+        </encoder>
+    </appender>
+    <appender name="rollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${log.path}/log-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>10</maxHistory>
+            <totalSizeCap>20MB</totalSizeCap>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>5MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder>
+            <pattern>[%thread] %-5level %logger{36} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="roleSiftingAppender" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <discriminator>
+            <key>userRole</key>
+            <defaultValue>ANONYMOUS</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="fileAppender" class="ch.qos.logback.core.FileAppender">
+                <file>${userRole}.log</file>
+                <encoder>
+                    <pattern>%-4relative %d [%contextName] [%thread] %level %mdc %logger{50} - %msg%n</pattern>
+                </encoder>
+            </appender>
+        </sift>
+    </appender>
+
+<!--    <appender name="colorAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d %green([%thread]) %highlight(%level) %logger{50} - %msg%n</pattern>
+        </layout>
+    </appender>-->
+    <appender name="colorAppender" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d [%contextName] %green([%thread]) %highlight(%level) %logger{50} - %msg %n</pattern>
+        </encoder>
+    </appender>
+    <appender name="htmlAppender" class="ch.qos.logback.core.FileAppender">
+        <file>${log.path}/log.html</file>
+        <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+            <layout class="ch.qos.logback.classic.html.HTMLLayout">
+                <pattern>%thread %level %logger %msg</pattern>
+            </layout>
+        </encoder>
+    </appender>
+    <appender name="error_filter_level_stdout"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <target>System.err</target>
+    </appender>
+    <appender name="thresholdFilter"
+              class="ch.qos.logback.core.ConsoleAppender">
+        <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+            <level>DEBUG</level>
+        </filter>
+        <encoder>
+            <pattern>%d [%contextName] [%thread] %-5level %logger{36} - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+<!--    <logger level="info" name="rollingFileLogger" additivity="false">
+        <appender-ref ref="rollingFile" />
+    </logger>-->
+    <root level="ALL">
+        <appender-ref ref="colorAppender" />
+<!--        <appender-ref ref="stdout" />-->
+    </root>
+<!-- all trace debug info warn error off -->
+    <logger name="org.gjgr.arithmetic" level="trace" additivity="false">
+        <appender-ref ref="colorAppender" />
+    </logger>
+    <logger name="org.gjgr.exam" level="TRACE" additivity="false">
+        <appender-ref ref="colorAppender" />
+    </logger>
+
+</configuration>

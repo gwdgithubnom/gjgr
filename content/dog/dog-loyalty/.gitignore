@@ -1,0 +1,10 @@
+
+exampler4j/\.idea/
+
+*.iml
+
+exampler4j/contest-example/target/
+
+exampler4j/hadoop-example/target/
+
+exampler4j/redis-example/target/

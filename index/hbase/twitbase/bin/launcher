@@ -1,0 +1,50 @@
+#! /usr/bin/env bash
+
+if [ $# = 0 ]; then
+  echo "Usage: launcher <command>"
+  echo "where <command> is an option from one of the following:"
+  echo ""
+  echo "TwitBase tools"
+  echo "  init      : Create tables for TwitBase"
+  echo "  twits     : Tool for managing twits"
+  echo "  users     : Tool for managing users"
+  echo "  loadusers : Tool for loading random users"
+  echo "  loadtwits : Tool for loading random twits"
+  echo ""
+  echo "MapReduce jobs"
+  echo "  timespent        : Run the TimeSpent log processing MapReduce job"
+  echo "  countshakespeare : Run the Shakespearean counter MapReduce job"
+  echo "  hamlettagger     : Run the Hamlet tagging MapReduce job"
+  echo ""
+  echo "Utils"
+  echo "  tablepresplitter : Create a pre-split table"
+  exit 1
+fi
+
+COMMAND=$1
+
+# Choose class to run
+if [ "$COMMAND" = "init" ] ; then
+  CLASS='HBaseIA.TwitBase.InitTables'
+elif [ "$COMMAND" = "twits" ] ; then
+  CLASS='HBaseIA.TwitBase.TwitsTool'
+elif [ "$COMMAND" = "users" ] ; then
+  CLASS='HBaseIA.TwitBase.UsersTool'
+elif [ "$COMMAND" = "loadusers" ] ; then
+  CLASS='HBaseIA.TwitBase.LoadUsers'
+elif [ "$COMMAND" = "loadtwits" ] ; then
+  CLASS='HBaseIA.TwitBase.LoadTwits'
+elif [ "$COMMAND" = "timespent" ] ; then
+  CLASS='HBaseIA.TwitBase.mapreduce.TimeSpent'
+elif [ "$COMMAND" = "countshakespeare" ] ; then
+  CLASS='HBaseIA.TwitBase.mapreduce.CountShakespeare'
+elif [ "$COMMAND" = "hamlettagger" ] ; then
+  CLASS='HBaseIA.TwitBase.mapreduce.HamletTagger'
+elif [ "$COMMAND" = "tablepresplitter" ] ; then
+  CLASS='utils.TablePreSplitter'
+else
+  CLASS=$COMMAND
+fi
+
+shift 
+java -cp target/twitbase-1.0.0.jar $CLASS "$@"

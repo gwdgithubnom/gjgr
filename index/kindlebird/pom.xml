@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>edu.gwd</groupId>
+    <artifactId>kindlebird</artifactId>
+    <version>1.0-SHAPHOT</version>
+    <packaging>pom</packaging>
+    <developers>
+        <developer>
+            <name>gwd</name>
+            <url>https://github.com/gwdgithubnom</url>
+            <email>gwd163nom@163.com</email>
+            <timezone>8</timezone>
+        </developer>
+    </developers>
+    <distributionManagement>
+        <site>
+            <id>website</id>
+            <url>scp://webhost.company.com/www/website</url>
+        </site>
+    </distributionManagement>
+    <properties>
+    </properties>
+
+</project>

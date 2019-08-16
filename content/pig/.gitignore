@@ -1,0 +1,67 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+# Custom for Visual Studio
+*.cs     diff=csharp
+# Standard to msysgit
+*.doc	 diff=astextplain
+*.DOC	 diff=astextplain
+*.docx diff=astextplain
+*.DOCX diff=astextplain
+*.dot  diff=astextplain
+*.DOT  diff=astextplain
+*.pdf  diff=astextplain
+*.PDF	 diff=astextplain
+*.rtf	 diff=astextplain
+*.RTF	 diff=astextplain
+.settings
+logs
+release.properties
+pom.xml.releaseBackup
+**/**/release
+**/release
+release
+**/target
+/.settings
+/.project
+/.classpath
+/.idea
+*.impl
+**/**/*.impl
+**/**/*.iml
+**/*.impl
+**/*.iml
+**/.idea
+*.impl
+*.iml
+# Compiled class file
+*.class
+*.log.gz
+# Log file
+*.log
+*.log.tar.gz
+*.log.gz
+# BlueJ files
+*.ctxt
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+# not exclude directory
+!dist/config
+!dist/lib/*.jar
+!dist/*.jar
+dist/logs/*
+dist/sample/logs/*
+
+# node js
+**/**/node-modules
+**/node-modules/**
+**/node_modules
+*/src/java/webapps/node_modules

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.gjgr.dragon</groupId>
+        <artifactId>dragon-parent</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.gjgr.dragon</groupId>
+    <artifactId>dragon-healthy</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <description>in content dragon parent support.</description>
+    <dependencies>
+        <!-- This is lib for supporting java te zhong bing -->
+        <!--
+        This is a byte libraries.
+        https://mvnrepository.com/artifact/org.ow2.asm/asm-all
+        -->
+        <dependency>
+            <groupId>org.ow2.asm</groupId>
+            <artifactId>asm-all</artifactId>
+            <version>5.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.sun.tools.btrace/btrace-agent -->
+        <dependency>
+            <groupId>com.sun.tools.btrace</groupId>
+            <artifactId>btrace-agent</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.sun.tools.btrace/btrace-client -->
+        <dependency>
+            <groupId>com.sun.tools.btrace</groupId>
+            <artifactId>btrace-client</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
+        <!--
+        This is a bytecode libraries.
+        https://mvnrepository.com/artifact/cglib/cglib
+        -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.4</version>
+        </dependency>
+        <!--
+        The Apache Commons IO library contains
+        utility classes, stream implementations, file filters, file comparators, endian transformation classes, and much more.
+        https://mvnrepository.com/artifact/commons-io/commons-io
+        -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+        <!--
+        The Apache Commons IO library contains
+        utility classes, stream implementations, file filters,
+        file comparators, endian transformation classes, and much more.
+        https://mvnrepository.com/artifact/commons-lang/commons-lang
+        -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <!--
+             The Apache Commons Codec package contains simple encoder and decoders for various formats such as Base64 and Hexadecimal.
+             In addition to these widely used encoders and decoders, the codec package also maintains a collection of phonetic encoding utilities.
+         -->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.10</version>
+        </dependency>
+        <!--
+        dom4j: the flexible XML framework for Java
+        -->
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+            <version>1.6.1</version>
+        </dependency>
+        <!--
+        XStream is a simple library to serialize objects to XML and back again.
+        -->
+        <dependency>
+            <groupId>com.thoughtworks.xstream</groupId>
+            <artifactId>xstream</artifactId>
+            <version>1.4.9</version>
+        </dependency>
+        <!--
+        Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation simple.
+        It is a class library for editing bytecodes in Java.
+        https://mvnrepository.com/artifact/org.javassist/javassist
+        -->
+        <dependency>
+            <groupId>org.javassist</groupId>
+            <artifactId>javassist</artifactId>
+            <version>3.20.0-GA</version>
+        </dependency>
+        <!-- this is build for json tools  -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+            <version>2.6.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject.extensions</groupId>
+            <artifactId>guice-servlet</artifactId>
+            <version>4.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.7</version>
+        </dependency>
+        <!--
+        This could monitor the cpu, ram, .... information
+        https://mvnrepository.com/artifact/io.kamon/sigar-loader
+        -->
+        <dependency>
+            <groupId>io.kamon</groupId>
+            <artifactId>sigar-loader</artifactId>
+            <version>1.6.6-rev002</version>
+        </dependency>
+
+        <!-- This is a provide dependency -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <version>2.5</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Base library for modules -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/log4j/log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.12</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <skip>false</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>copy-bin</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${app.assemble.directory}/${app.name}/bin</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/bin</directory>
+                                    <includes>
+                                        <include>*</include>
+                                        <include>*/*</include>
+                                        <include>**/*</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-config</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${app.assemble.directory}/${app.name}/config</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/config</directory>
+                                    <includes>
+                                        <include>*</include>
+                                        <include>*/*</include>
+                                        <include>**/*</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-var</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${app.assemble.directory}/${app.name}/var</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>src/main/var</directory>
+                                    <includes>
+                                        <include>*</include>
+                                        <include>*/*</include>
+                                        <include>**/*</include>
+                                    </includes>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

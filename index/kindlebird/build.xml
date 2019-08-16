@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="myproject" basedir="." default="deploy">
+
+	<property name="dir.src" location="${basedir}\src" />
+	<property name="project.conf" location="${basedir}\conf" />
+	<property name="project.lib" value="${basedir}\lib" />
+
+	<property name="mycomputer" value="D:\Program Files\apache-tomcat-6.0.14" />
+	<property name="computer" value="D:\apache-tomcat-6.0.14">
+	</property>
+
+	<property name="srcDic.dir" value="${basedir}\WebRoot" />
+	<property name="dir.lib" location="${basedir}\WebRoot\WEB-INF\lib" />
+	<property name="dir.classes" location="${srcDic.dir}\WEB-INF\classes">
+	</property>
+	<!-- 关于tomcat的位置-->
+	<property name="server.dir" value="${mycomputer}">
+	</property>
+
+	<property name="tomcat.conf" value="${server.dir}\conf" />
+	<property name="tomcat.lib" value="${server.dir}\lib" />
+
+
+	<property name="tomcat.webapps" value="${server.dir}\webapps\ROOT" />
+	<property name="apps.dir" value="${server.dir}\webapps\${ant.project.name}">
+	</property>
+	<property name="delete.jar" value="D:\Program Files\apache-tomcat-6.0.14\webapps\platform_demo\WEB-INF\lib">
+	</property>
+
+	<target name="deploy" description="部署工程">
+		<echo message="---->deploy project....">
+		</echo>
+
+		<copy todir="${tomcat.webapps}">
+			<fileset dir="${srcDic.dir}">
+			</fileset>
+		</copy>
+	</target>
+
+
+	<!--启动tomcat服务器-->
+	<target name="start tomcat" description="启动服务器 tomcat ....">
+		<exec executable="${server.dir}/bin/startup.bat" spawn="true" vmlauncher="false">
+			<env key="CATALINA_HOME" value="${server.dir}" />
+			<arg line="/c start ${server.dir}/bin/startup.bat" />
+		</exec>
+	</target>
+
+	<!--关闭tomcat服务器-->
+	<target name="stop tomcat" description="关闭服务器tomcat">
+		<java jar="${server.dir}/bin/bootstrap.jar" fork="true">
+			<jvmarg value="-Dcatalina.home=${server.dir}" />
+			<arg line="stop" />
+		</java>
+		<waitfor maxwait="5" maxwaitunit="second">
+			<available file="errors.log" />
+		</waitfor>
+	</target>
+
+	<target name="start firefox" description="启动火狐浏览器">
+			<exec executable="C:/Program Files/Internet Explorer/IEXPLORE.EXE" spawn="true" vmlauncher="false">
+			</exec>
+		</target>
+	
+	<target name="start IE" description="启动IE">
+		<exec executable="C:/Program Files/Internet Explorer/IEXPLORE.EXE" spawn="true" vmlauncher="false">
+		</exec>
+	</target>
+
+
+
+
+
+
+
+	
+
+
+	<!---配置 xml文件-->
+	<target name="changeXml" description="改变tomcat的xml">
+		<echo message="---->change xml">
+		</echo>
+		<delete>
+			<fileset dir="${tomcat.conf}">
+				<include name="server.xml" />
+				<include name="web.xml" />
+			</fileset>
+		</delete>
+		<copy todir="${tomcat.conf}">
+			<fileset dir="${project.conf}\server_2" includes="server.xml">
+			</fileset>
+		</copy>
+		<copy todir="${tomcat.conf}">
+			<fileset dir="${project.conf}\web_2" includes="web.xml">
+			</fileset>
+		</copy>
+	</target>
+	
+	<target name="config-project" description="配置相关服务">
+		<echo message="---->change some configration">
+		</echo>
+		<delete>
+			<fileset dir="${basedir}">
+				<include name=".mymetadata" />
+			</fileset>
+		</delete>
+		<copy todir="${basedir}">
+			<fileset dir="${project.lib}\ant" includes= ".mymetadata" >
+			</fileset>
+		</copy>
+	</target>
+	
+
+	<target name="reset" description="重置tomcat的xml">
+		<echo message="---->reset xml">
+		</echo>
+		<delete>
+			<fileset dir="${tomcat.conf}">
+				<include name="server.xml" />
+				<include name="web.xml" />
+			</fileset>
+		</delete>
+		<copy todir="${tomcat.conf}">
+			<fileset dir="${project.conf}\server_1" includes="server.xml">
+			</fileset>
+		</copy>
+		<copy todir="${tomcat.conf}">
+			<fileset dir="${project.conf}\web_1" includes="web.xml">
+			</fileset>
+		</copy>
+	</target>
+
+	
+	<target name="install jar" description="install jar">
+		<echo message="---->copy jar">
+		</echo>
+		<copy todir="${tomcat.lib}">
+			<fileset dir="${project.lib}" includes="*.jar">
+			</fileset>
+		</copy>
+	</target>
+	
+
+	<target name="delet_ROOT" description="删除服务器Root项目">
+		<echo message="---->deleting project....">
+		</echo>
+		<delete dir="${tomcat.webapps}" />
+	</target>
+</project>

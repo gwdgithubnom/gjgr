@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'org.gjgr'
+version = '0.0.1-SNAPSHOT'
+
+description = "arithemtic4j"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'junit', name: 'junit', version:'4.12'
+    runtime group: 'junit', name: 'junit', version:'4.12'
+    providedCompile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.1.0'
+}
