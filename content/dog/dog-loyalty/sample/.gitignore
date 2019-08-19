@@ -1,0 +1,42 @@
+**/target
+/.settings
+/.project
+/.classpath
+/.idea
+*.impl
+**/**/*.impl
+**/**/*.iml
+**/*.impl
+**/*.iml
+**/.idea
+*.impl
+*.iml
+# Compiled class file
+*.class
+deploy.xml
+*/deploy.xml
+# Log file
+*.log
+repo
+# BlueJ files
+*.ctxt
+*.releaseBackup
+release.properties
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+# not exclude directory
+!dist/config
+!dist/lib/*.jar
+!dist/*.jar
+dist/logs/*
+dist/sample/logs/*
+
