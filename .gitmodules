@@ -1,0 +1,3 @@
+[submodule "application/pig/pig-chivalrous"]
+	path = application/pig/pig-chivalrous
+	url = git@github.com:gwdgithubnom/pig-chivalrous.git
