@@ -1,10 +1,8 @@
 # gjgr
 
-
 # Announcement
 
 Git Once!
-
 
 ## Namespace
  
