@@ -3,12 +3,16 @@
 
 # Announcement
 
+Git Once!
+
 
 ## Namespace
  
  * Abstract Namespace: 
  
       * include the plan and design of some paper or others news. study
+      
+      * include good personal namespace and organise namespace.
 
  * Reference Namespace: it would include other projects works. And all of them is just work for themselves.  
  
