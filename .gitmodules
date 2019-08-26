@@ -7,3 +7,6 @@
 [submodule "abstract/algorithm/liuxinyu95/unplugged"]
 	path = abstract/algorithm/liuxinyu95/unplugged
 	url = git@github.com:liuxinyu95/unplugged.git
+[submodule "reference/private/datahub"]
+	path = reference/private/datahub
+	url = git@github.com:gwdgithubnom/datahub.git

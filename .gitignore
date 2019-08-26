@@ -17,6 +17,7 @@ index/python/pydata-book/datasets/fec/P00000001-ALL.csv
 .settings
 .project
 logs
+repo.gitignore
 release.properties
 pom.xml.releaseBackup
 **/**/release
@@ -52,9 +53,9 @@ release
 *.war
 *.nar
 *.ear
-*.zip
-*.tar.gz
-*.rar
+# *.zip
+# *.tar.gz
+# *.rar
 # not exclude directory
 !dist/config
 !dist/lib/*.jar
