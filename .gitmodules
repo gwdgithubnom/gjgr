@@ -10,3 +10,6 @@
 [submodule "reference/private/datahub"]
 	path = reference/private/datahub
 	url = git@github.com:gwdgithubnom/datahub.git
+[submodule "application/pig/browsermob-proxy"]
+	path = application/pig/browsermob-proxy
+	url = git@github.com:lightbody/browsermob-proxy.git
