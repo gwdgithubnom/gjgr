@@ -304,16 +304,24 @@
                         <groupId>commons-logging</groupId>
                         <artifactId>commons-logging</artifactId>
                     </exclusion>
-
                 </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpmine</artifactId>
+                <version>${org.apache.httpcomponents.httpcore}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
                 <artifactId>httpcore</artifactId>
                 <version>${org.apache.httpcomponents.httpcore}</version>
             </dependency>
-
-
+            <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore-nio -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpcore-nio</artifactId>
+                <version>${org.apache.httpcomponents.httpcore}</version>
+            </dependency>
             <dependency>
                 <groupId>org.apache.opennlp</groupId>
                 <artifactId>opennlp-tools</artifactId>

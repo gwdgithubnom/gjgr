@@ -1,5 +1,10 @@
 # gjgr
 
+![Java version](https://img.shields.io/badge/Java-1.8.1+-blue.svg)
+![PyPI version](https://img.shields.io/badge/Python-3.6+-orange.svg)
+![Gradle version](https://img.shields.io/badge/Gradle-0.0.1+-green.svg)
+![Maven version](https://img.shields.io/badge/Maven-3.5.0+-green.svg)
+
 # Announcement
 
 Git Once!
