@@ -73,7 +73,7 @@
         <servlet.com.google.api.client.servlet.version>1.25.0</servlet.com.google.api.client.servlet.version>
         <protobuf.com.google.api.client.protobuf.version>1.25.0</protobuf.com.google.api.client.protobuf.version>
         <xml.com.google.api.client.xml.version>1.25.0</xml.com.google.api.client.xml.version>
-        <exchange.org.apache.thrift.version>0.11.0</exchange.org.apache.thrift.version>
+        <exchange.org.apache.thrift.version>0.12.0</exchange.org.apache.thrift.version>
     </properties>
     <description>
        gjgr project parent pom
