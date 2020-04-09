@@ -13,3 +13,12 @@
 [submodule "application/pig/browsermob-proxy"]
 	path = application/pig/browsermob-proxy
 	url = git@github.com:lightbody/browsermob-proxy.git
+[submodule "index/hubdata"]
+	path = index/hubdata
+	url = git@github.com:gwdgithubnom/hubdata.git
+[submodule "index/private/datahub"]
+	path = index/private/datahub
+	url = git@github.com:gwdgithubnom/datahub.git
+[submodule "index/private/hubdata"]
+	path = index/private/hubdata
+	url = git@github.com:gwdgithubnom/hubdata.git
