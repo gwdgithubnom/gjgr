@@ -54,7 +54,7 @@
         <org.jsoup.version>1.12.1</org.jsoup.version>
         <org.json.json.version>20180130</org.json.json.version>
         <org.python.version>2.7.1b3</org.python.version>
-        <framwork.org.springframework.version>5.0.9.RELEASE</framwork.org.springframework.version>
+        <framwork.org.springframework.version>5.0.11.RELEASE</framwork.org.springframework.version>
         <framwork.org.springframework.boot.version>2.0.4.RELEASE</framwork.org.springframework.boot.version>
         <log.org.springframwork.spring.jcl.version>${framwork.org.springframework.version}</log.org.springframwork.spring.jcl.version>
         <aop.org.springframework.spring.aop.version>${framwork.org.springframework.version}</aop.org.springframework.spring.aop.version>
