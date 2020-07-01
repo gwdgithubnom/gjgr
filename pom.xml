@@ -45,7 +45,7 @@
         <org.apache.httpcomponents.httpcore>4.4.10</org.apache.httpcomponents.httpcore>
         <org.apache.httpcomponents.httpasyncclient.version>4.1.4</org.apache.httpcomponents.httpasyncclient.version>
         <org.apache.opennlp.tools.version>1.9.0</org.apache.opennlp.tools.version>
-        <org.apache.logging.log4j.version>2.11.0</org.apache.logging.log4j.version>
+        <org.apache.logging.log4j.version>2.13.2</org.apache.logging.log4j.version>
         <org.appache.hadoop.version>2.6.0-mdh3.11.1-jre8</org.appache.hadoop.version>
         <org.apache.zookeeper.version>3.4.14</org.apache.zookeeper.version>
         <org.seleniumhq.selenium.version>3.141.59</org.seleniumhq.selenium.version>
