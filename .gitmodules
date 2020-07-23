@@ -1,6 +1,3 @@
-[submodule "application/pig/pig-chivalrous"]
-	path = application/pig/pig-chivalrous
-	url = git@github.com:gwdgithubnom/pig-chivalrous.git
 [submodule "abstract/algorithm/liuxinyu95/AlgoXY"]
 	path = abstract/algorithm/liuxinyu95/AlgoXY
 	url = git@github.com:liuxinyu95/AlgoXY.git
@@ -22,3 +19,6 @@
 [submodule "index/private/hubdata"]
 	path = index/private/hubdata
 	url = git@github.com:gwdgithubnom/hubdata.git
+[submodule "content/pig"]
+	path = content/pig
+	url = git@github.com:gwdgithubnom/pig.git
