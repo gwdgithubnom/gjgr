@@ -1,3 +1,0 @@
-# arithmeitc
-# arithmetic4c
-

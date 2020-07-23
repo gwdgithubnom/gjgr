@@ -7,9 +7,6 @@
 [submodule "reference/private/datahub"]
 	path = reference/private/datahub
 	url = git@github.com:gwdgithubnom/datahub.git
-[submodule "application/pig/browsermob-proxy"]
-	path = application/pig/browsermob-proxy
-	url = git@github.com:lightbody/browsermob-proxy.git
 [submodule "index/hubdata"]
 	path = index/hubdata
 	url = git@github.com:gwdgithubnom/hubdata.git
@@ -22,3 +19,30 @@
 [submodule "content/pig"]
 	path = content/pig
 	url = git@github.com:gwdgithubnom/pig.git
+[submodule "content/dog"]
+	path = content/dog
+	url = git@github.com:gwdgithubnom/dog.git
+[submodule "content/dragon"]
+	path = content/dragon
+	url = git@github.com:gwdgithubnom/dragon.git
+[submodule "content/goat"]
+	path = content/goat
+	url = git@github.com:gwdgithubnom/goat.git
+[submodule "content/monkey"]
+	path = content/monkey
+	url = git@github.com:gwdgithubnom/monkey.git
+[submodule "content/ox"]
+	path = content/ox
+	url = git@github.com:gwdgithubnom/ox.git
+[submodule "content/rabbit"]
+	path = content/rabbit
+	url = git@github.com:gwdgithubnom/rabbit.git
+[submodule "content/rooster"]
+	path = content/rooster
+	url = git@github.com:gwdgithubnom/rooster.git
+[submodule "content/snake"]
+	path = content/snake
+	url = git@github.com:gwdgithubnom/snake.git
+[submodule "content/tiger"]
+	path = content/tiger
+	url = git@github.com:gwdgithubnom/tiger.git
