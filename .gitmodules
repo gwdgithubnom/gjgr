@@ -46,3 +46,6 @@
 [submodule "content/tiger"]
 	path = content/tiger
 	url = git@github.com:gwdgithubnom/tiger.git
+[submodule "external/earth"]
+	path = external/earth
+	url = git@github.com:gwdgithubnom/earth.git
