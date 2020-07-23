@@ -12,29 +12,29 @@
 Git Once!
 
 ## Namespace
- 
- * Abstract Namespace: 
- 
+
+ * Abstract Namespace:
+
       * include the plan and design of some paper or others news. study
-      
+
       * include good personal namespace and organise namespace.
 
- * Reference Namespace: it would include other projects works. And all of them is just work for themselves.  
- 
+ * Reference Namespace: it would include other projects works. And all of them is just work for themselves.
+
  * Application Namespace: include the mature projects or application.
- 
+
  * Content Namespace: that thing we did or we are doing.
- 
+
  * External Namespace:
- 
+
  * Further Namespace: that could not do, but want do things.
- 
+
  * Index Namespace: that things is helping to search or find things.
- 
- * Instruction Namespace: 
- 
+
+ * Instruction Namespace:
+
  * Model Namespace:
- 
+
  * Src Namespace: the other Namespace.
 
 ## Code & Modules
@@ -46,6 +46,23 @@ Stander format about code decline.
 [java source](src/main/java)
 
 [python source](src/main/python)
+
+### Structure
+
+application -> : The ten Earthly Branches (H-S)
+
+used: 子丑寅卯辰巳午未申酉戌亥
+
+future -> : The ten Celestial or Heavenly Stems(E-B)
+
+used: 甲乙丙丁戊己庚辛壬癸
+
+external ->: Five Elements
+
+used: metal -> wood -> water -> fire -> earth
+
+metal (application) -> wood (data) -> water (arithmetic) -> fire (tools,plugins,components) -> earth (framework)
+
 
 ### Modules
 
@@ -70,4 +87,3 @@ Stander format about code decline.
 - [goat-elegant](https://github.com/gwdgithubnom/goat-elegant)
 
 
- 
