@@ -86,6 +86,22 @@ metal (application) -> wood (data) -> water (arithmetic) -> fire (tools,plugins,
 
 - [goat-elegant](https://github.com/gwdgithubnom/goat-elegant)
 
+### Doc
+
+#### use guide
+
+make sure had been install mkdocs, sphinx
+sphinx-quickstart, to get more information to visit [readthedocs](https://docs.readthedocs.io/en/stable/intro/getting-started-with-sphinx.html)
+
+#### step by step
+
+#### step one
+
+* sphinx-quickstart
+
+* make html
+
+* change theme
 
 ## Usage
 
@@ -99,4 +115,3 @@ git submodule init [module] and git submodule update [module]
 
 git submodule update --init --recursive [module]
 ````
-

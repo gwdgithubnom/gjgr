@@ -34,3 +34,6 @@
 [submodule "external/water"]
 	path = external/water
 	url = git@github.com:gwdgithubnom/water.git
+[submodule "external/metal"]
+	path = external/metal
+	url = git@github.com:gwdgithubnom/metal.git
