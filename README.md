@@ -87,3 +87,16 @@ metal (application) -> wood (data) -> water (arithmetic) -> fire (tools,plugins,
 - [goat-elegant](https://github.com/gwdgithubnom/goat-elegant)
 
 
+## Usage
+
+with config:
+
+git config --get core.ignorecase true
+````
+git submodule add [git@domain:project.git] [module location path]
+
+git submodule init [module] and git submodule update [module]
+
+git submodule update --init --recursive [module]
+````
+
